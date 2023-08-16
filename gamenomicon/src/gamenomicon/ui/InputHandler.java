@@ -1,19 +1,29 @@
 package gamenomicon.ui;
 
+import java.util.Optional;
 import java.util.Scanner;
 
+/**
+ * O InputHandler lida com os inputs do usuário e a validação dos dados.
+ *
+ * @author bayerl
+ */
 public class InputHandler {
-    private Scanner scanner;
+    private static Scanner scanner = new Scanner(System.in);
 
-    public InputHandler() {
+    /*public InputHandler() {
         scanner = new Scanner(System.in);
+    }*/
+
+    public static String getInput() {
+        while(true) {
+            String userInput = scanner.nextLine();
+            if(!userInput.isEmpty()) return userInput;
+            System.out.println("Input cannot be empty");
+        }
     }
 
-    public String getInput() {
-        return this.scanner.nextLine();
-    }
-
-    public boolean validateIntegerInput(int min, int max, String input) {
+    public static boolean validateIntegerInput(int min, int max, String input) {
         try {
             int parsedInt = Integer.parseInt(input);
             if(parsedInt < min || parsedInt > max) throw new NumberFormatException();

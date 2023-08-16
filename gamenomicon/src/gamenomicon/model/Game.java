@@ -82,7 +82,7 @@ public class Game implements Comparable<Game> {
 
     @Override
     public String toString() {
-        return this.getTitle() + "\n" + "Score: " + this.getScore() +
-                this.getReview();
+        return this.getTitle() + "\n" + "Score: " + this.getScore() + "\n" +
+                this.getReview() + "\n" + "-------------------------" + "\n";
     }
 }

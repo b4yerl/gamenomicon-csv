@@ -1,6 +1,6 @@
 package gamenomicon.comparators;
 
-import gamenomicon.entities.Game;
+import gamenomicon.model.Game;
 import java.util.Comparator;
 
 public class ScoreComparator implements Comparator<Game> {

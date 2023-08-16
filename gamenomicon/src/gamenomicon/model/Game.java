@@ -1,7 +1,12 @@
-package gamenomicon.entities;
+package gamenomicon.model;
 
 import java.util.Objects;
 
+/**
+ * Classe que representa os jogos presentes no Gamenomicon
+ *
+ * @author bayerl
+ */
 public class Game implements Comparable<Game> {
     private String title;
     private String review;
@@ -9,6 +14,14 @@ public class Game implements Comparable<Game> {
 
     private int publishingYear;
 
+    /**
+     * Instancia um novo jogo para ser adicionado ao Gamenomicon
+     *
+     * @param title             Título do jogo.
+     * @param review            Review do jogo.
+     * @param score             Pontuação do jogo (entre 0 e 5).
+     * @param publishingYear    Ano de publicação do jogo.
+     */
     public Game(String title, String review, int score, int publishingYear) {
         this.title = title;
         this.review = review;

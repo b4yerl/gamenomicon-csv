@@ -1,5 +1,6 @@
 package gamenomicon.ui;
 
+import gamenomicon.file.FileHandler;
 import gamenomicon.model.Game;
 import gamenomicon.model.GameBook;
 
@@ -164,7 +165,19 @@ public class UserInterface {
         System.out.println(returning);
         mainMenu();
     }
+
     public void endApplicationUI() {
-        return;
+        boolean wasSaved = FileHandler.save(this.games);
+        if(!wasSaved) {
+            System.out.println("Trying one more time...");
+            wasSaved = FileHandler.save(this.games);
+        }
+
+        String returning = """
+                 -------------------------
+                |   EXITING APPLICATION   |
+                 -------------------------
+                """;
+        System.out.println(returning);
     }
 }

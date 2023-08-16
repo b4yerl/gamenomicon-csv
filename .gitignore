@@ -25,3 +25,6 @@ replay_pid*
 
 # IDEA IntelliJ
 .idea/
+
+# Gamenomicon data
+gamenomicon.csv

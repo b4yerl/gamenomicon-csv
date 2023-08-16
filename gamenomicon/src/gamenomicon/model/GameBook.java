@@ -83,4 +83,12 @@ public class GameBook {
         Collections.sort(sorted, new YearComparator());
         return sorted;
     }
+    public List<String[]> getFullList() {
+        List<String[]> entries = new ArrayList<>();
+        for(Game game : this.games) {
+            entries.add(new String[]{game.getTitle(), game.getReview(),
+                    String.valueOf(game.getScore()), String.valueOf(game.getPublishingYear())});
+        }
+        return entries;
+    }
 }
